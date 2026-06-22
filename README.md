@@ -4,21 +4,23 @@ Timezone comparison table generator for international meeting scheduling.
 
 ## Install
 
+Grab the [latest release]( https://github.com/simon-b/rmeet/releases/latest), or on Mac/Linux:
+
 ```bash
-cargo install --path .
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/simon-b/rmeet/releases/latest/download/rmeet-installer.sh | sh
 ```
 
 ## Usage
 
 ```bash
 # Compare timezones for 24 hours
-cargo run -- LAX CDG AKL
+rmeet LAX CDG AKL
 
 # Show 4 hours starting now
-cargo run -- LAX CDG -n 4
+rmeet LAX CDG -n 4
 
 # Plan meeting 3 hours from now, show next 8 hours
-cargo run -- JFK LHR NRT -n 8 -s 3
+rmeet JFK LHR NRT -n 8 -s 3
 ```
 
 ## Options
